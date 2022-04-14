@@ -9,40 +9,21 @@ CakePHP is a rapid development framework for PHP which uses commonly known desig
 Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
 
 
-## Some Handy Links
+# Homeページ
+![demo](https://gyazo.com/ccdc45165e11d83301e882fe3c7faafa/raw)
+![demo](https://gyazo.com/0df3a9160d9a55e19ca7b7d5e0e6e75f/raw)
+![demo](https://gyazo.com/4db5aaaeacf341134d17e7827c989d14/raw)
 
-[CakePHP](https://cakephp.org) - The rapid development PHP framework
+# おすすめ記事ページ
+![demo](https://gyazo.com/88554e736c82d1274cb13eec2a358b8a/raw)
+![demo](https://gyazo.com/4be5a5a3cb1ef2f0be312d8197b18db2/raw)
+![demo](https://gyazo.com/fda8f6c0fc0a33fd5a4d5408359e260e/raw)
 
-[CookBook](https://book.cakephp.org) - THE CakePHP user documentation; start learning here!
+# 記事投稿ページ（このページはログイン必須です）
+![demo](https://gyazo.com/874acfa7c5ab05a9d6d4a76c35e6c344/raw)
 
-[API](https://api.cakephp.org) - A reference to CakePHP's classes
+# userが投稿した記事を見るページ（このページはログイン必須です）
+![demo](https://gyazo.com/0406ade6b6d9fc28308a55aa475cabb0/raw)
 
-[Plugins](https://plugins.cakephp.org) - A repository of extensions to the framework
-
-[The Bakery](https://bakery.cakephp.org) - Tips, tutorials and articles
-
-[Community Center](https://community.cakephp.org) - A source for everything community related
-
-[Training](https://training.cakephp.org) - Join a live session and get skilled with the framework
-
-[CakeFest](https://cakefest.org) - Don't miss our annual CakePHP conference
-
-[Cake Software Foundation](https://cakefoundation.org) - Promoting development related to CakePHP
-
-
-## Get Support!
-
-[#cakephp](https://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
-
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
-
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
-
-
-## Contributing
-
-[CONTRIBUTING.md](CONTRIBUTING.md) - Quick pointers for contributing to the CakePHP project
-
-[CookBook "Contributing" Section (2.x)](https://book.cakephp.org/2.0/en/contributing.html) [(3.x)](https://book.cakephp.org/3.0/en/contributing.html) - Version-specific details about contributing to the project
+# ECサイトページ（amazonの該当ページに移行します）
+![demo](https://gyazo.com/14297ace646fb8dba5a87da8ebc4974c/raw)
