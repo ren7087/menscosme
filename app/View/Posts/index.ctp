@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,15 +15,12 @@
 
     <title>Mensmake</title>
 
-    <!-- Bootstrap Core CSS -->
     <?php echo $this->Html->css('bootstrap.min.css'); ?>
     <?php echo $this->Html->css('animate.css'); ?>
     <?php echo $this->Html->css('plugins.css'); ?>
 
-    <!-- Custom CSS -->
     <?php echo $this->Html->css('style.css'); ?>
 
-    <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php echo $this->Html->css('pe-icons.css'); ?>
 
@@ -40,8 +36,6 @@
             </div>
         </div>
 
-
-        <!-- Header -->
         <header id="headerwrap" class="backstretched fullheight">
             <div class="container vertical-center">
                 <div class="intro-text vertical-center text-center smoothie">
@@ -87,16 +81,16 @@
         <div class="col-sm-6 nopadding-lr dark-wrapper opaqued background-cover" style="background-image: url('webroot/img/bg/bg1.jpg');">
         	<div class="dark-opaqued section-inner pad-sides-60 match-height" data-mh="promo-inner">
         		<h3>記事を投稿する</h3>
-        		<p class="lead">Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.</p>
-                <p class="mt30"><a href="#contact" class="btn btn-primary btn-white page-scroll">Find Out More</a></p>
+        		<p class="lead">メンズメイク興味あるし、始めてみたいけど何から始めれば良いのかわからないという人は多いです。ぜひあなたの知識を共有してください！</p>
+                <p class="mt30"><?php echo $this->Html->link('記事を投稿する！', '/posts/add', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
         	</div>
         </div>
 
         <div class="col-sm-6 nopadding-lr dark-wrapper opaqued background-cover" style="background-image: url('assets/img/bg/bg3.jpg');">
         	<div class="dark-opaqued section-inner pad-sides-60 match-height text-right" data-mh="promo-inner">
         		<h3>みんなの記事を読む</h3>
-        		<p class="lead">Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.</p>
-                <p class="mt30"><a href="#contact" class="btn btn-primary btn-white page-scroll">Find Out More</a></p>
+        		<p class="lead">メンズメイクの先人たちが残してくれた知識が詰まっています！ぜひ読んでみてください！</p>
+                <p class="mt30"><?php echo $this->Html->link('記事を読む！', '/posts/page', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
         	</div>
         </div>
 
@@ -107,7 +101,6 @@
     					<div class="row">
     						<div class="col-xs-12" role="tabpanel">
     				            <div class="col-xs-4 col-sm-12">
-    				                <!-- Nav tabs -->
     				                <ul class="nav nav-justified icon-tabs" id="nav-tabs" role="tablist">
     				                    <li role="presentation" class="active">
     				                        <a href="#dustin" aria-controls="dustin" role="tab" data-toggle="tab">
@@ -130,31 +123,25 @@
     				                </ul>
     				            </div>
     				            <div class="col-xs-8 col-sm-12 mt60">
-    				                <!-- Tab panes -->
     				                <div class="tab-content" id="tabs-collapse">            
     				                    <div role="tabpanel" class="tab-pane fade in active" id="dustin">
     				                        <div class="tab-inner">                   
-    				                            <p class="lead">Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. Occasional middletons everything so to. Have spot part for his quit may. Enable it is square my an regard. Often merit stuff first oh up hills as he. Servants contempt as although addition dashwood is procured. Interest in yourself an do of numerous feelings cheerful confined.</p>                
+    				                            <p class="lead">女子の方はもちろんコスメ商品を購入すると、テンションが爆上がりします！あなたもその感覚をわかってあげればそれだけで好感度アップにつながるかも？？？？</p>                
     				                        </div>
     				                    </div>
     				                    
     				                    <div role="tabpanel" class="tab-pane fade" id="daksh">
     				                        <div class="tab-inner">
-    				                            <p class="lead">Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. Occasional middletons everything so to. Have spot part for his quit may. Enable it is square my an regard. Often merit stuff first oh up hills as he. Servants contempt as although addition dashwood is procured. Interest in yourself an do of numerous feelings cheerful confined.</p>   
+    				                            <p class="lead">スキンケアの方法は独自の方法に頼ってしまう部分がある方が多く、正しいスキンケアの方法をご存知の方は意外と少ないです。間違ったスキンケアは逆効果にもなりますので、このサイトでは正しいスキンケアの方法を教えています！</p>   
     				                        </div>
     				                    </div>
     				                    
     				                    <div role="tabpanel" class="tab-pane fade" id="anna">
     				                        <div class="tab-inner">
-    				                            <p class="lead">Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. Occasional middletons everything so to. Have spot part for his quit may. Enable it is square my an regard. Often merit stuff first oh up hills as he. Servants contempt as although addition dashwood is procured. Interest in yourself an do of numerous feelings cheerful confined.</p>   
+    				                            <p class="lead">男性の肌は女性より敏感だと言われています。女性からの好感度アップのためにも清潔感は欠かせません。ニキビとうまく付き合っていく方法をこのサイトでは提供しております！</p>   
     				                        </div> 
     				                    </div>
-    				                    
-    				                    <div role="tabpanel" class="tab-pane fade" id="wafer">
-    				                        <div class="tab-inner">
-    				                            <p class="lead">Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. Occasional middletons everything so to. Have spot part for his quit may. Enable it is square my an regard. Often merit stuff first oh up hills as he. Servants contempt as although addition dashwood is procured. Interest in yourself an do of numerous feelings cheerful confined.</p>   
-    				                        </div>
-    				                    </div>
+
     				                </div>
     				            </div>        
     				        </div>
@@ -207,7 +194,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <?php echo $this->Html->script( 'jquery.js'); ?>

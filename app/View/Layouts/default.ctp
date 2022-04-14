@@ -27,21 +27,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
-		// echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
-		// echo $this->fetch('css');
-		// echo $this->fetch('script');
 	?>
 	<?php echo $this->Html->css('bootstrap.min.css'); ?>
     <?php echo $this->Html->css('animate.css'); ?>
     <?php echo $this->Html->css('plugins.css'); ?>
 
-    <!-- Custom CSS -->
     <?php echo $this->Html->css('style.css'); ?>
 
-    <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php echo $this->Html->css('pe-icons.css'); ?>
 </head>
@@ -50,7 +43,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			<nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
 				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
 							<span class="sr-only">Toggle navigation</span>
@@ -61,7 +53,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<?php echo $this->Html->link('Mensmake', '/posts', array('class'=>'navbar-brand smoothie')); ?>
 					</div>
 
-					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="main-navigation">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
@@ -128,14 +119,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								<?php echo $this->Html->link('Lip', array('controller'=>'lips', 'action'=>'trend'), array('class'=>'tag-link btn btn-theme btn-white btn-xs', 'title'=>'3 topics')); ?>
 								<?php echo $this->Html->link('Skin Care', array('controller'=>'skincares', 'action'=>'recommend'), array('class'=>'tag-link btn btn-theme btn-white btn-xs', 'title'=>'3 topics')); ?>
 								<?php echo $this->Html->link('Perfume', array('controller'=>'perfumes', 'action'=>'trend'), array('class'=>'tag-link btn btn-theme btn-white btn-xs', 'title'=>'3 topics')); ?>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Aid</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Fashion</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">News</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Cars</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Global Affairs</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Music</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">Downloads</a>
-                                <a href="#" class="tag-link btn btn-theme btn-white btn-xs" title="3 topics">MP3</a>
                               </div> 
                             </div>
     		        	</div>
