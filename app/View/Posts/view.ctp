@@ -14,10 +14,7 @@
     <?php echo $this->Html->css('bootstrap.min.css'); ?>
     <?php echo $this->Html->css('animate.css'); ?>
     <?php echo $this->Html->css('plugins.css'); ?>
-
     <?php echo $this->Html->css('style.css'); ?>
-
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php echo $this->Html->css('pe-icons.css'); ?>
 
 </head>

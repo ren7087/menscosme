@@ -8,7 +8,7 @@
 */ ?>
 <?php if ($posts): ?>
     <div style="margin-left: 100px;">
-    <h2><?php echo 'Uploads'; ?></h4><br>
+    <h2><?php echo 'みんなが投稿してくれた記事'; ?></h4><br>
     <?php foreach ($posts as $post) : ?>
     <h4><?php echo 'title'; ?></h4>
     <?php echo h($post['Post']['title']); ?><br>

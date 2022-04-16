@@ -32,10 +32,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->css('bootstrap.min.css'); ?>
     <?php echo $this->Html->css('animate.css'); ?>
     <?php echo $this->Html->css('plugins.css'); ?>
-
     <?php echo $this->Html->css('style.css'); ?>
-
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php echo $this->Html->css('pe-icons.css'); ?>
 </head>
 <body>
@@ -44,12 +41,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
 				<div class="container-fluid">
 					<div class="navbar-header page-scroll">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
 						<?php echo $this->Html->link('Mensmake', '/posts', array('class'=>'navbar-brand smoothie')); ?>
 					</div>
 
@@ -83,7 +74,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Login/Logout</a>
 								<ul class="dropdown-menu" role="menu">
-									<li><?php echo $this->Html->link('Login', array('controller'=>'users', 'action'=>'login')); ?></li>
+									<?php if ($auth) : ?>
+										<li><a href='#'>ログイン済みです！</a></li>
+									<?php else: ?>
+										<li><?php echo $this->Html->link('Login', array('controller'=>'users', 'action'=>'login')); ?></li>
+									<?php endif; ?>
 									<li><?php echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout')); ?></li>
 								</ul>
 							</li>

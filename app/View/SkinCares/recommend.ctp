@@ -9,12 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="img/ico/apple-touch-icon-57x57.png">
 
-    <title>Grace by Distinctive Themes</title>
+    <title>Cosme</title>
 
 </head>
 

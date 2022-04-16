@@ -8,20 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="img/ico/apple-touch-icon-57x57.png">
 
     <title>Mensmake</title>
 
     <?php echo $this->Html->css('bootstrap.min.css'); ?>
     <?php echo $this->Html->css('animate.css'); ?>
     <?php echo $this->Html->css('plugins.css'); ?>
-
     <?php echo $this->Html->css('style.css'); ?>
-
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <?php echo $this->Html->css('pe-icons.css'); ?>
 
 </head>
@@ -66,7 +59,7 @@
                             <p>Our misson<br>
                                 「メンズメイクをもっと身近に」
                             </p>
-                            <p class="mt30"><?php echo $this->Html->link('メンズメイクとは？', array('controller'=>'posts', 'action'=>'what'), array('class'=>'btn btn-primary btn-theme page-scroll')); ?></p>
+                            <p class="mt30"><?php echo $this->Html->link('メンズメイクについてもっと知る！', array('controller'=>'posts', 'action'=>'view'), array('class'=>'btn btn-primary btn-theme page-scroll')); ?></p>
                         </div>
 
                         <div class="col-md-6">
@@ -207,7 +200,7 @@
        'use strict';
         jQuery('#headerwrap').backstretch([
           "img/bg1.jpg",
-          "img/bg3.png",
+          "img/bg3.jpg",
           "img/bg2.jpg",
         ], {duration: 8000, fade: 500});
     });

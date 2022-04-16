@@ -9,24 +9,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="img/ico/apple-touch-icon-57x57.png">
 
-    <title>Grace by Distinctive Themes</title>
+    <title>Cosme</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/plugins.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/pe-icons.css" rel="stylesheet">
+    <?php echo $this->Html->css('bootstrap.min.css'); ?>
+    <?php echo $this->Html->css('animate.css'); ?>
+    <?php echo $this->Html->css('plugins.css'); ?>
+    <?php echo $this->Html->css('style.css'); ?>
+    <?php echo $this->Html->css('pe-icons.css'); ?>
+    <?php echo $this->Html->css('shop.css'); ?>
 
 </head>
 
@@ -39,6 +30,18 @@
             	<span class="loading-animation animate-flicker"><?php echo $this->Html->image('loading.GIF'); ?></span>
             </div>
         </div>
+
+        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-speed="0.7">
+            <div class="section-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mt30 text-center wow fadeIn" data-wow-delay="0.5s">
+                            <h2 class="section-heading">BE ONLY YOU</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
          <section>
             <div class="section-inner">
@@ -59,7 +62,7 @@
                                         </div>
                                         <div class="item-excerpt">
                                             <h4><a href="#">【ディプティック】オードトワレ タムダオ 50ml</a></h4><br>
-                                            <p>樹齢60年以上のサンダルウッドの木から抽出したオリエンタルな香りに、シダーウッドとサイプレスの心落ち着くお香のようなウッディで￥な香りです</p>
+                                            <p>樹齢60年以上のサンダルウッドの木から抽出したオリエンタルな香りに、シダーウッドとサイプレスの心落ち着くお香のようなウッディな香りです</p>
                                             <h4 class="pull-right">¥19,980</h4>
                                         </div>
                                     </li>
@@ -123,22 +126,22 @@
                                     <div>
                                         <div class="media">
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Perfume</a></span>
+                                                <span class="media-heading"><?php echo $this->Html->link('Perfume', '/shops/perfume', array('class'=>'coloured')); ?></span>
                                             </div>
                                         </div>
                                         <div class="media">
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Lip</a></span>
+                                                <span class="media-heading"><?php echo $this->Html->link('Lip', '/shops/lip', array('class'=>'coloured')); ?></span>
                                             </div>
                                         </div>
                                         <div class="media">
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Skin care</a></span>
+                                                <span class="media-heading"><?php echo $this->Html->link('Skin Care', '/shops/skincare', array('class'=>'coloured')); ?></span>
                                             </div>
                                         </div>
                                         <div class="media">
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Hair oil</a></span>
+                                                <span class="media-heading"><?php echo $this->Html->link('Hair Oil', '/shops/hairoil', array('class'=>'coloured')); ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -150,82 +153,109 @@
             </div>
         </section>
 
+        <h3>検索</h3>
+        <?php echo $this->Form->create('Search', array('url' => '/shops/index')); ?>
+        <div style="display:inline-flex">
+            <?php echo $this->Form->input('name', array('label'=>'', 'autocomplete'=>'off', 'placeholder'=>'dior', 'value'=>$start)); ?>
+        </div>
+        <div style="display:inline-flex"><?php echo $this->Form->end('検索'); ?></div><br>
+
         <section>
             <div class="section-inner nopaddingtop">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <?php foreach($lips as $lip) : ?>
+                        <div class="col-md-4"><br>
                             <div class="hover-item">
-                            <?php echo $this->Html->image('perfume/4.jpg', array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));?>
-                                <div class="overlay-item-caption smoothie wow fadeIn" data-wow-delay="0.5s"></div>
-                                <div class="hover-item-caption smoothie">
-                                    <div class="vertical-center smoothie">
-                                        <?php echo $this->Html->link('購入ページへ', 'https://www.amazon.co.jp/%E3%80%90%E3%82%B8%E3%83%A7%E3%83%BC-%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%B3%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%EF%BC%86%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B8%E3%82%A2-EDC%E3%83%BBSP-100ml-%E4%B8%A6%E8%A1%8C%E8%BC%B8%E5%85%A5%E5%93%81/dp/B004EHNWB4/ref=sr_1_2?crid=NXS1CQ8FEOS6&keywords=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC+100&qid=1648979506&sprefix=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%2Caps%2C244&sr=8-2'); ?>
+                                <?php $image = $lip['Lip']['img']; ?>
+                                <?php if (empty($image) ||is_null($image)) {
+                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
+                                }elseif (isset($image)) {
+                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
+                                }; ?>
+                                    <div class="hover-item-caption smoothie">
+                                        <div class="vertical-center smoothie">
+                                            <?php echo $this->Html->link('購入ページへ', $lip['Lip']['url']); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item-excerpt">
-                                <h4><a href="#">【Jo MALONE LONDON】イングリッシュペアー＆フリージア 100ml</a></h4>
-                                <p>ジョーマローン一番人気の香水で、甘すぎずフルーティーな香りです</p>
-                                <h4 class="pull-right">¥13,500</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hover-item">
-                            <?php echo $this->Html->image('perfume/4.jpg', array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));?>
-                                <div class="overlay-item-caption smoothie wow fadeIn" data-wow-delay="0.5s"></div>
-                                <div class="hover-item-caption smoothie">
-                                    <div class="vertical-center smoothie">
-                                        <?php echo $this->Html->link('購入ページへ', 'https://www.amazon.co.jp/%E3%80%90%E3%82%B8%E3%83%A7%E3%83%BC-%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%B3%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%EF%BC%86%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B8%E3%82%A2-EDC%E3%83%BBSP-100ml-%E4%B8%A6%E8%A1%8C%E8%BC%B8%E5%85%A5%E5%93%81/dp/B004EHNWB4/ref=sr_1_2?crid=NXS1CQ8FEOS6&keywords=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC+100&qid=1648979506&sprefix=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%2Caps%2C244&sr=8-2'); ?>
-                                    </div>
+                                <div class="item-excerpt">
+                                    <h4><?php echo $lip['Lip']['title']; ?></h4>
+                                    <p><?php echo $lip['Lip']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $lip['Lip']['cost']; ?></h4>
                                 </div>
                             </div>
-                            <div class="item-excerpt">
-                                <h4><a href="#">【Jo MALONE LONDON】イングリッシュペアー＆フリージア 100ml</a></h4>
-                                <p>ジョーマローン一番人気の香水で、甘すぎずフルーティーな香りです</p>
-                                <h4 class="pull-right">¥13,500</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                        <?php endforeach; ?>
+                        <?php foreach($hairoils as $hairoil) : ?>
+                        <div class="col-md-4"><br>
                             <div class="hover-item">
-                            <?php echo $this->Html->image('perfume/4.jpg', array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));?>
-                                <div class="overlay-item-caption smoothie wow fadeIn" data-wow-delay="0.5s"></div>
-                                <div class="hover-item-caption smoothie">
-                                    <div class="vertical-center smoothie">
-                                        <?php echo $this->Html->link('購入ページへ', 'https://www.amazon.co.jp/%E3%80%90%E3%82%B8%E3%83%A7%E3%83%BC-%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%B3%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%EF%BC%86%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B8%E3%82%A2-EDC%E3%83%BBSP-100ml-%E4%B8%A6%E8%A1%8C%E8%BC%B8%E5%85%A5%E5%93%81/dp/B004EHNWB4/ref=sr_1_2?crid=NXS1CQ8FEOS6&keywords=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC+100&qid=1648979506&sprefix=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%2Caps%2C244&sr=8-2'); ?>
+                                <?php $image = $hairoil['Hairoil']['img']; ?>
+                                <?php if (empty($image) ||is_null($image)) {
+                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
+                                }elseif (isset($image)) {
+                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
+                                }; ?>
+                                    <div class="hover-item-caption smoothie">
+                                        <div class="vertical-center smoothie">
+                                            <?php echo $this->Html->link('購入ページへ', $hairoil['Hairoil']['url']); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item-excerpt">
-                                <h4><a href="#">【Jo MALONE LONDON】イングリッシュペアー＆フリージア 100ml</a></h4>
-                                <p>ジョーマローン一番人気の香水で、甘すぎずフルーティーな香りです</p>
-                                <h4 class="pull-right">¥13,500</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hover-item">
-                            <?php echo $this->Html->image('perfume/4.jpg', array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));?>
-                                <div class="overlay-item-caption smoothie wow fadeIn" data-wow-delay="0.5s"></div>
-                                <div class="hover-item-caption smoothie">
-                                    <div class="vertical-center smoothie">
-                                        <?php echo $this->Html->link('購入ページへ', 'https://www.amazon.co.jp/%E3%80%90%E3%82%B8%E3%83%A7%E3%83%BC-%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%B3%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%EF%BC%86%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B8%E3%82%A2-EDC%E3%83%BBSP-100ml-%E4%B8%A6%E8%A1%8C%E8%BC%B8%E5%85%A5%E5%93%81/dp/B004EHNWB4/ref=sr_1_2?crid=NXS1CQ8FEOS6&keywords=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC+100&qid=1648979506&sprefix=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9A%E3%82%A2%E3%83%BC%2Caps%2C244&sr=8-2'); ?>
-                                    </div>
+                                <div class="item-excerpt">
+                                    <h4><?php echo $hairoil['Hairoil']['title']; ?></h4>
+                                    <p><?php echo $hairoil['Hairoil']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $hairoil['Hairoil']['cost']; ?></h4>
                                 </div>
                             </div>
-                            <div class="item-excerpt">
-                                <h4><a href="#">【Jo MALONE LONDON】イングリッシュペアー＆フリージア 100ml</a></h4>
-                                <p>ジョーマローン一番人気の香水で、甘すぎずフルーティーな香りです</p>
-                                <h4 class="pull-right">¥13,500</h4>
+                        <?php endforeach; ?>
+                        <?php foreach($perfumes as $perfume) : ?>
+                        <div class="col-md-4"><br>
+                            <div class="hover-item">
+                                <?php $image = $perfume['Perfume']['img']; ?>
+                                <?php if (empty($image) ||is_null($image)) {
+                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
+                                }elseif (isset($image)) {
+                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
+                                }; ?>
+                                    <div class="hover-item-caption smoothie">
+                                        <div class="vertical-center smoothie">
+                                            <?php echo $this->Html->link('購入ページへ', $perfume['Perfume']['url']); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-excerpt">
+                                    <h4><?php echo $perfume['Perfume']['title']; ?></h4>
+                                    <p><?php echo $perfume['Perfume']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $perfume['Perfume']['cost']; ?></h4>
+                                </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
+                        <?php foreach($skincares as $skincare) : ?>
+                        <div class="col-md-4"><br>
+                            <div class="hover-item">
+                                <?php $image = $skincare['Skincare']['img']; ?>
+                                <?php if (empty($image) ||is_null($image)) {
+                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
+                                }elseif (isset($image)) {
+                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
+                                }; ?>
+                                    <div class="hover-item-caption smoothie">
+                                        <div class="vertical-center smoothie">
+                                            <?php echo $this->Html->link('購入ページへ', $skincare['Skincare']['url']); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-excerpt">
+                                    <h4><?php echo $skincare['Skincare']['title']; ?></h4>
+                                    <p><?php echo $skincare['Skincare']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $skincare['Skincare']['cost']; ?></h4>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>                
                 </div>
             </div>   
         </section>
-
-    	<div role="tabpanel">
-
-    	</div>
     </div>
 
     <!-- jQuery -->
@@ -234,17 +264,6 @@
     <?php echo $this->Html->script( 'plugins.js'); ?>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <?php echo $this->Html->script( 'init.js'); ?>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-       'use strict';
-        jQuery('#headerwrap').backstretch([
-          "img/bg1.jpg",
-          "img/bg3.png",
-          "img/bg2.jpg",
-        ], {duration: 8000, fade: 500});
-    });
-    </script>
 
 </body>
 
