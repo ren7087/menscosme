@@ -1,8 +1,7 @@
 <?php
 class ShopsController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses = array('Lip', 'Perfume', 'Hairoil', 'Skincare');
-    public $components = array('Paginator');
+    public $uses = array('Lip', 'Perfume', 'Hairoil', 'Skincare', 'Product');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -10,84 +9,62 @@ class ShopsController extends AppController {
     }
 
     public function index(){
-        $perfumes = $this->Perfume->find('all', array(
-            "conditions" => array(
-              'Perfume.valid' => 1
-            )));
-        $lips = $this->Lip->find('all', array(
-            "conditions" => array(
-              'Lip.valid' => 1
-            )));
-        $hairoils = $this->Hairoil->find('all', array(
-            "conditions" => array(
-              'Hairoil.valid' => 1
-            )));
-        $skincares = $this->Skincare->find('all', array(
-            "conditions" => array(
-              'Skincare.valid' => 1
-            )));
-        $this->set(compact('skincares', 'hairoils', 'lips', 'perfumes'));
-
-        if ($this->request->is('Post')) {
-            $result = $this->request->data['Search']['name'];
-            $this->set(compact('result'));
-
-            $conditions = array(
-                'Circle.name LIKE' => '%'.$result.'%'
-            );
+        $name = $this->request->data['Search']['name'];
+        $conditions = array(
+                'Product.title LIKE' => '%'.$name.'%'
+        );
+        if ($this->request->is('Post') && !empty($name)) {
             $this->paginate = array(
-                'Circle' => array(
-                    'limit' => 10,
-                    'order' => array('id' => 'desc'),
-                    'conditions' => $conditions,
-                    'fields' => array('Circle.*', 'InviteVerify.*'),
-                ),
+                'conditions' => $conditions,
+                'limit' => 10,
+                // 'fields' => array('Product.*'),
             );
         } else {
             $this->paginate = array(
-                'Circle' => array(
-                    'limit' => 10,
-                    'order' => array('id' => 'desc'),
-                    'fields' => array('Circle.*', 'InviteVerify.*'),
-                ),
+                'limit' => 10,
+                // 'fields' => array('Product.*'),
             );
         }
-
-
+        $this->set('products', $this->paginate('Product'));
     }
 
-    public function view(){
-
-    }
-
-    public function perfume(){
-        $perfumes = $this->Perfume->find('all', array(
-            "conditions" => array(
-              'Perfume.valid' => 1
-            )));
-        $this->set(compact('perfumes'));
-    }
+    //商品詳細ページ
+    // public function view(){
+    // }
 
     public function lip(){
-        $lips = $this->Lip->find('all', array(
+        $lips = $this->Product->find('all', array(
             "conditions" => array(
-              'Lip.valid' => 1
+                'Product.valid' => 1,
+                'Product.category' => 1,
             )));
         $this->set(compact('lips'));
     }
 
-    public function hairoil(){
-        $hairoils = $this->Hairoil->find('all', array(
+    public function perfume(){
+        $perfumes = $this->Product->find('all', array(
             "conditions" => array(
-              'Hairoil.valid' => 1
+              'Product.valid' => 1,
+              'Product.category' => 2,
+            )));
+        $this->set(compact('perfumes'));
+    }
+
+
+    public function hairoil(){
+        $hairoils = $this->Product->find('all', array(
+            "conditions" => array(
+                'Product.valid' => 1,
+                'Product.category' => 3,
             )));
         $this->set(compact('hairoils'));
     }
 
     public function skincare(){
-        $skincares = $this->Skincare->find('all', array(
+        $skincares = $this->Product->find('all', array(
             "conditions" => array(
-              'Skincare.valid' => 1
+                'Product.valid' => 1,
+                'Product.category' => 4,
             )));
         $this->set(compact('skincares'));
     }

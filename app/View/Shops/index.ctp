@@ -153,21 +153,31 @@
             </div>
         </section>
 
-        <h3>検索</h3>
-        <?php echo $this->Form->create('Search', array('url' => '/shops/index')); ?>
-        <div style="display:inline-flex">
-            <?php echo $this->Form->input('name', array('label'=>'', 'autocomplete'=>'off', 'placeholder'=>'dior', 'value'=>$start)); ?>
+        <div style="margin-left: 200px;">
+            <h3>検索</h3>
+            <?php echo $this->Form->create('Search', array('type'=>'post')); ?>
+            <div style="display:inline-flex">
+                <?php echo $this->Form->input('name', array('label' => false, 'placeholder' => 'タイトルを対象に検索')); ?>
+            </div>
+            <div style="display:inline-flex">
+                <?php echo $this->Form->end('検索'); ?>
+            </div>
+        </div><br>
+
+        <div id="paginate">
+            <span class="prev"><?php echo $this->Paginator->prev('< 前へ', array(), null, array('class' => 'prev disabled')); ?></span>
+            <span class="pageno"><?php echo $this->Paginator->numbers(array('separator' => '')); ?></span>
+            <span class="next"><?php  echo $this->Paginator->next('次へ >', array(), null, array('class' => 'next disabled')); ?></span>
         </div>
-        <div style="display:inline-flex"><?php echo $this->Form->end('検索'); ?></div><br>
 
         <section>
             <div class="section-inner nopaddingtop">
                 <div class="container">
                     <div class="row">
-                        <?php foreach($lips as $lip) : ?>
+                        <?php foreach($products as $product) : ?>
                         <div class="col-md-4"><br>
                             <div class="hover-item">
-                                <?php $image = $lip['Lip']['img']; ?>
+                                <?php $image = $product['Product']['img']; ?>
                                 <?php if (empty($image) ||is_null($image)) {
                                     echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
                                 }elseif (isset($image)) {
@@ -175,80 +185,14 @@
                                 }; ?>
                                     <div class="hover-item-caption smoothie">
                                         <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $lip['Lip']['url']); ?>
+                                            <?php echo $this->Html->link('購入ページへ', $product['Product']['url']); ?>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item-excerpt">
-                                    <h4><?php echo $lip['Lip']['title']; ?></h4>
-                                    <p><?php echo $lip['Lip']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $lip['Lip']['cost']; ?></h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                        <?php foreach($hairoils as $hairoil) : ?>
-                        <div class="col-md-4"><br>
-                            <div class="hover-item">
-                                <?php $image = $hairoil['Hairoil']['img']; ?>
-                                <?php if (empty($image) ||is_null($image)) {
-                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
-                                }elseif (isset($image)) {
-                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
-                                }; ?>
-                                    <div class="hover-item-caption smoothie">
-                                        <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $hairoil['Hairoil']['url']); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-excerpt">
-                                    <h4><?php echo $hairoil['Hairoil']['title']; ?></h4>
-                                    <p><?php echo $hairoil['Hairoil']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $hairoil['Hairoil']['cost']; ?></h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                        <?php foreach($perfumes as $perfume) : ?>
-                        <div class="col-md-4"><br>
-                            <div class="hover-item">
-                                <?php $image = $perfume['Perfume']['img']; ?>
-                                <?php if (empty($image) ||is_null($image)) {
-                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
-                                }elseif (isset($image)) {
-                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
-                                }; ?>
-                                    <div class="hover-item-caption smoothie">
-                                        <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $perfume['Perfume']['url']); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-excerpt">
-                                    <h4><?php echo $perfume['Perfume']['title']; ?></h4>
-                                    <p><?php echo $perfume['Perfume']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $perfume['Perfume']['cost']; ?></h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                        <?php foreach($skincares as $skincare) : ?>
-                        <div class="col-md-4"><br>
-                            <div class="hover-item">
-                                <?php $image = $skincare['Skincare']['img']; ?>
-                                <?php if (empty($image) ||is_null($image)) {
-                                    echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
-                                }elseif (isset($image)) {
-                                    echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img', 'data-wow-delay'=>'0.5s'));
-                                }; ?>
-                                    <div class="hover-item-caption smoothie">
-                                        <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $skincare['Skincare']['url']); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-excerpt">
-                                    <h4><?php echo $skincare['Skincare']['title']; ?></h4>
-                                    <p><?php echo $skincare['Skincare']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $skincare['Skincare']['cost']; ?></h4>
+                                    <h4><?php echo $product['Product']['title']; ?></h4>
+                                    <p><?php echo $product['Product']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $product['Product']['cost']; ?></h4>
                                 </div>
                             </div>
                         <?php endforeach; ?>

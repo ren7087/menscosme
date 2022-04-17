@@ -2,6 +2,7 @@
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('Flash');
+    public $uses = array('Post', 'Comment');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -17,12 +18,35 @@ class PostsController extends AppController {
 
     }
 
-    //ユーザーの投稿データ参照
-    public function page(){
-      $this->set('posts', $this->Post->find('all'));
-	}
+    //ユーザーの投稿データ個別
+    public function page($id = null) {
+      $this->Post->id = $id;
+      // $this->set('posts', $this->Post->read());
+      $posts = $this->Post->find('all', array(
+        "conditions" => array(
+          'Post.valid' => 1,
+          'Post.id' => $id,
+        )
+      ));
+      $this->set(compact('posts'));
+      $username = $this->Auth->user('username');
+      $this->set(compact('username'));
+    }
+
+    //ユーザーの投稿データ一覧
+    public function page2(){
+      $posts = $this->Post->find('all', array(
+        "conditions" => array(
+          'Post.valid' => 1
+        )
+      ));
+      $this->set(compact('posts'));
+	  }
 
     public function add() {
+      // $userid = $this->Auth->user('id');
+      $username = $this->Auth->user('username');
+      $this->set(compact('username'));
         if ($this->request->is('post')) {
           $tmp = $this->request->data['Post']['file']['tmp_name'];
           if(is_uploaded_file($tmp)) {

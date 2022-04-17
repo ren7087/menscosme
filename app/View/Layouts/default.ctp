@@ -62,7 +62,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								<ul class="dropdown-menu" role="menu">
 									<li><?php echo $this->Html->link('記事を投稿する', array('controller'=>'posts', 'action'=>'add')); ?></li>
 									<li><?php echo $this->Html->link('記事一覧', array('controller'=>'posts', 'action'=>'view')); ?></li>
-									<li><?php echo $this->Html->link('みんなの記事を見る', array('controller'=>'posts', 'action'=>'page')); ?></li>
+									<li><?php echo $this->Html->link('みんなの記事を見る', array('controller'=>'posts', 'action'=>'page2')); ?></li>
 								</ul>
 							</li>
 							<li class="dropdown">

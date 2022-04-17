@@ -50,7 +50,7 @@
                         <?php foreach($hairoils as $hairoil) : ?>
                         <div class="col-md-4"><br>
                             <div class="hover-item">
-                                <?php $image = $hairoil['Hairoil']['img']; ?>
+                                <?php $image = $hairoil['Product']['img']; ?>
                                 <?php if (empty($image) ||is_null($image)) {
                                     echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
                                 }elseif (isset($image)) {
@@ -58,14 +58,14 @@
                                 }; ?>
                                     <div class="hover-item-caption smoothie">
                                         <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $hairoil['Hairoil']['url']); ?>
+                                            <?php echo $this->Html->link('購入ページへ', $hairoil['Product']['url']); ?>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item-excerpt">
-                                    <h4><?php echo $hairoil['Hairoil']['title']; ?></h4>
-                                    <p><?php echo $hairoil['Hairoil']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $hairoil['Hairoil']['cost']; ?></h4>
+                                    <h4><?php echo $hairoil['Product']['title']; ?></h4>
+                                    <p><?php echo $hairoil['Product']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $hairoil['Product']['cost']; ?></h4>
                                 </div>
                             </div>
                         <?php endforeach; ?>

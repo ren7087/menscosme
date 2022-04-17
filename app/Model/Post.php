@@ -14,5 +14,8 @@ class Post extends AppModel{
    //            'message' => '画像サイズは500KB以下でお願いします',
    //         )
    //      ),
-   //   );     
+   //   );  
+   
+   // public $belongsTo = 'User';
+   public $hasMany = "Comment";
 }

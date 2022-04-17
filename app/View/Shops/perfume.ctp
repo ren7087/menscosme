@@ -50,7 +50,7 @@
                         <?php foreach($perfumes as $perfume) : ?>
                         <div class="col-md-4"><br>
                             <div class="hover-item">
-                                <?php $image = $perfume['Perfume']['img']; ?>
+                                <?php $image = $perfume['Product']['img']; ?>
                                 <?php if (empty($image) ||is_null($image)) {
                                     echo $this->Html->image("img/noimage.png", array('class'=>'img-responsive smoothie wow fadeIn', 'data-wow-delay'=>'0.5s'));
                                 }elseif (isset($image)) {
@@ -58,14 +58,14 @@
                                 }; ?>
                                     <div class="hover-item-caption smoothie">
                                         <div class="vertical-center smoothie">
-                                            <?php echo $this->Html->link('購入ページへ', $perfume['Perfume']['url']); ?>
+                                            <?php echo $this->Html->link('購入ページへ', $perfume['Product']['url']); ?>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item-excerpt">
-                                    <h4><?php echo $perfume['Perfume']['title']; ?></h4>
-                                    <p><?php echo $perfume['Perfume']['content']; ?></p>
-                                    <h4 class="pull-right"><?php echo $perfume['Perfume']['cost']; ?></h4>
+                                    <h4><?php echo $perfume['Product']['title']; ?></h4>
+                                    <p><?php echo $perfume['Product']['content']; ?></p>
+                                    <h4 class="pull-right"><?php echo $perfume['Product']['cost']; ?></h4>
                                 </div>
                             </div>
                         <?php endforeach; ?>
