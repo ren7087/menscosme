@@ -54,9 +54,9 @@
                             <?php foreach ($posts as $post) :  ?>
                             <div class="row">
                                 <div class="col-xs-10">
-                                    <h2 class="post-title"><?php echo $post['Post']['title']; ?></h2>
+                                    <h2 class="post-title"><?php echo h($post['Post']['title']); ?></h2>
                                     <div class="item-metas text-muted mb30">
-                                        <span class="meta-item">こちらの記事は<span class="secondary-font" style="color: red;"><?php echo $post['Post']['username']; ?></span>さんが投稿しました！</span>
+                                        <span class="meta-item">こちらの記事は<span class="secondary-font" style="color: red;"><?php echo h($post['Post']['username']); ?></span>さんが投稿しました！</span>
                                         <!-- <span class="meta-item">COMMENTS <span class="secondary-font">3</span></span> -->
                                     </div>
                                     <div class="hover-item mb30">
