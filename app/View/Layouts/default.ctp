@@ -103,7 +103,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     		            <div class="col-md-4">
     		            	<div class="widget about-us-widget">
                                 <h4 class="widget-title"><strong>About</strong></h4>
-                                <p>このサイトはrenによって作成されました。最終更新日は2022/04/3 です。</p>
+                                <p>このサイトはrenによって作成されました。最終更新日は2022/04/18 です。</p>
                             </div>
     		        	</div>
     		        	<div class="col-md-4">

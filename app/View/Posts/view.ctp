@@ -98,7 +98,7 @@
         	<div class="dark-opaqued section-inner pad-sides-60 match-height text-right" data-mh="promo-inner">
         		<h3>みんなの記事を読む</h3>
         		<p class="lead">記事を投稿してくれた方々の投稿を読むことができます！面白い記事がたくさんあります！ぜひご覧ください！</p>
-                <p class="mt30"><?php echo $this->Html->link('記事を読む！', '/posts/page', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
+                <p class="mt30"><?php echo $this->Html->link('記事を読む！', '/posts/page2', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
         	</div>
         </div>
 

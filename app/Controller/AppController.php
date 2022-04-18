@@ -43,4 +43,12 @@ class AppController extends Controller {
     public function beforeFilter() {
         $this->set('auth',$this->Auth->user() );
     }
+
+    //エラー発生時の処理
+    function afterFilter() {
+        if ($this->response->statusCode() == '404')
+        {
+            $this->redirect('/', '301');
+        }
+    }
 }
