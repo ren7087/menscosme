@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
+
+    <title>Cosme</title>
+
+    <?php echo $this->Html->css('bootstrap.min.css'); ?>
+    <?php echo $this->Html->css('animate.css'); ?>
+    <?php echo $this->Html->css('plugins.css'); ?>
+    <?php echo $this->Html->css('style.css'); ?>
+    <?php echo $this->Html->css('pe-icons.css'); ?>
+    <?php echo $this->Html->css('shop.css'); ?>
+
+</head>
+
 <br>
 <br>
 <br>
