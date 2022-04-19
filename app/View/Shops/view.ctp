@@ -22,12 +22,6 @@
 
     <div class="master-wrapper">
 
-        <div class="preloader">
-            <div class="preloader-img">
-            	<span class="loading-animation animate-flicker"><?php echo $this->Html->image('loading.GIF'); ?></span>
-            </div>
-        </div>
-
         <section>
             <div class="section-inner">
                 <div class="container">

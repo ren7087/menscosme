@@ -22,13 +22,6 @@
 <body id="page-top" class="index">
 
     <div class="master-wrapper">
-
-        <div class="preloader">
-            <div class="preloader-img">
-            	<span class="loading-animation animate-flicker"><?php echo $this->Html->image("loading.GIF"); ?></span>
-            </div>
-        </div>
-
         <header id="headerwrap" class="backstretched fullheight">
             <div class="container vertical-center">
                 <div class="intro-text vertical-center text-center smoothie">

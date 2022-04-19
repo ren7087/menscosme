@@ -22,13 +22,6 @@
 <body id="page-top" class="index">
 
     <div class="master-wrapper">
-
-        <div class="preloader">
-            <div class="preloader-img">
-            	<span class="loading-animation animate-flicker"><?php echo $this->Html->image("loading.GIF"); ?></span>
-            </div>
-        </div>
-
         <header id="headerwrap">
              <ul class="owl-carousel fw-carousel wow fadeIn list-unstyled" data-items="3" data-items-tablet="[768,2]"  data-items-mobile="[479,1]">
                     <li class="nopadding-lr hover-item">
