@@ -91,6 +91,13 @@
         </div>                
     </div>
 </section>
+<br>
+<div id="paginate" style="margin-left: 200px;">
+    <span class="prev"><?php echo $this->Paginator->prev('< 前へ', array(), null, array('class' => 'prev disabled')); ?></span>
+    <span class="pageno"><?php echo $this->Paginator->numbers(array('separator' => '')); ?></span>
+    <span class="next"><?php  echo $this->Paginator->next('次へ >', array(), null, array('class' => 'next disabled')); ?></span>
+</div>
+<br><br>
 
     <!-- jQuery -->
     <?php echo $this->Html->script( 'plugins.js'); ?>
