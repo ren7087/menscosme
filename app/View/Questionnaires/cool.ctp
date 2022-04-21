@@ -178,28 +178,28 @@
 <h3>おすすめアイテム</h3>
     <h4>
     <li>
-        UNO ウーノ フェイスカラークリエイター
+        リップスボーイ フェイスジェル#002
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/bbcream.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("cool/lips.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        ビボ　アイフル　マユズミA
+        メイベリン ニューヨーク 　ヌード アイシャドウ パレット 12カラー
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/pencil.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("cool/eye.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        too cool for school シェーディング アートクラスバイロダン
+        アディクション ザ ブラッシュ #004 ノクターン
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/cool.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("cool/nose.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        DHC薬用リップクリーム
+        ナーズ NARS アフターグローリップバーム #3421
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("cool/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
 </div>
 <br>
 <br>

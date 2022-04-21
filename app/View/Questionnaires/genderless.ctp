@@ -178,28 +178,28 @@
 <h3>おすすめアイテム</h3>
     <h4>
     <li>
-        UNO ウーノ フェイスカラークリエイター
+        RMK リクイドファンデーション
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/bbcream.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("genderless/fande.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        ビボ　アイフル　マユズミA
+        エクセル スキニーリッチシャドウ SR06 センシュアルブラウン
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/pencil.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("genderless/eye.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        too cool for school シェーディング アートクラスバイロダン
+        キャンメイク(CANMAKE) カラーチェンジアイブロウ
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/cool.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("genderless/brow.png", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        DHC薬用リップクリーム
+        キャンメイク(CANMAKE) ステイオンバームルージュ
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("genderless/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
 </div>
 <br>
 <br>

@@ -172,28 +172,28 @@
 <h3>おすすめアイテム</h3>
     <h4>
     <li>
-        UNO ウーノ フェイスカラークリエイター
+        JUNG SAEM MOOL ジョンセンムル エッセンシャルスキンヌーダークッションSPF50+/ PA+++
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/bbcream.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("kpop/fande.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        ビボ　アイフル　マユズミA
+        ケイト スーパーシャープライナーEX2.0 BK-1 漆黒ブラック
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/pencil.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("kpop/eye.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        too cool for school シェーディング アートクラスバイロダン
+        クリオ　プロアイパレット
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/cool.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("kpop/paret.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        DHC薬用リップクリーム
+        エチュードハウス ETUDE HOUSE ディアダーリン ウォータージェルティント
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("kpop/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
 </div>
 <br>
 <br>

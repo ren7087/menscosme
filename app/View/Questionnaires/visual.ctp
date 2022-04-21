@@ -172,28 +172,28 @@
 <h3>おすすめアイテム</h3>
     <h4>
     <li>
-        UNO ウーノ フェイスカラークリエイター
+        M・A・C（マック）スタジオ フィックス フルイッド SPF 15 MAC ファンデーション
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/bbcream.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("visual/fande.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        ビボ　アイフル　マユズミA
+        ドルチェコスメティック 22色メイクパレット
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/pencil.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("visual/eye.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        too cool for school シェーディング アートクラスバイロダン
+        ロレアル パリ リップ シャインオン 912 インディゴクレーズ
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/cool.jpg", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("visual/lip.jpg", array("width"=>"200px", "height"=>"200px")); ?>
     <h4>
     <li>
-        DHC薬用リップクリーム
+        ドルチェ・パーフェクトワンデー
     </li>
     </h4>
-    <?php echo $this->Html->image("midasinami/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("visual/color.png", array("width"=>"200px", "height"=>"200px")); ?>
 </div>
 <br>
 <br>
