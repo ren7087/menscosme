@@ -77,7 +77,7 @@
                         echo $this->Html->image("https://drive.google.com/uc?export=view&id=$image", array('class'=>'lip-img'));
                     }; ?>
                     <div class="hover-item-caption smoothie">
-                        <div class="vertical-center smoothie">
+                        <div class="vertical-center smoothie" style="margin-top: 200px;">
                             <?php echo $this->Html->link('購入ページへ', $product['Product']['url']); ?>
                         </div>
                     </div>
