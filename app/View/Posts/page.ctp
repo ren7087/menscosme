@@ -35,38 +35,9 @@
             <div class="container">
                 <?php foreach ($posts as $post) :  ?>
                     <br>
-                    <?php echo $this->Html->image($post["Post"]["image"], array("class"=>"img-responsive smoothie wow fadeIn", "data-wow-delay"=>"0.5s")); ?>
+                    <?php echo $this->Html->image($post["Post"]["image"], array("class"=>"img-responsive smoothie wow fadeIn")); ?>
                     <br><p style="font-size: 30px;"><?php echo $post['Post']['body']; ?></p><br>
-                <?php endforeach ; ?>
-
-
-                <div data-easyshare data-easyshare-url="http://www.distinctivethemes.com/">
-                    <!-- Total -->
-                    <button data-easyshare-button="total">
-                        <span>Total</span>
-                    </button>
-                    <span data-easyshare-total-count>0</span>
-
-                    <!-- Facebook -->
-                    <button data-easyshare-button="facebook">
-                        <span>Share</span>
-                    </button>
-                    <span data-easyshare-button-count="facebook">0</span>
-
-                    <!-- Twitter -->
-                    <button data-easyshare-button="twitter" data-easyshare-tweet-text="">
-                        <span>Tweet</span>
-                    </button>
-                    <span data-easyshare-button-count="twitter">0</span>
-
-                    <!-- Google+ -->
-                    <button data-easyshare-button="google">
-                        <span>+1</span>
-                    </button>
-                    <span data-easyshare-button-count="google">0</span>
-
-                    <div data-easyshare-loader>Loading...</div>
-                </div><br>                       
+                <?php endforeach ; ?>                    
 
                 <h3>Comments</h3>
                 <?php foreach ($post['Comment'] as $comment): ?>

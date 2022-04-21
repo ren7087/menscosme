@@ -47,6 +47,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<div class="collapse navbar-collapse" id="main-navigation">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
+								<?php echo $this->Html->link('メイク診断', "#", array('class'=>'dropdown-toggle', 'data-hover'=>'dropdown', 'data-toggle'=>'dropdown')); ?>
+								<ul class="dropdown-menu" role="menu">
+									<li><?php echo $this->Html->link('タイプ診断', array('controller'=>'questionnaires', 'action'=>'question')); ?></li>
+								</ul>
+							</li>
+							<li class="dropdown">
 								<?php echo $this->Html->link('Home', "#", array('class'=>'dropdown-toggle', 'data-hover'=>'dropdown', 'data-toggle'=>'dropdown')); ?>
 								<ul class="dropdown-menu" role="menu">
 								    <li><?php echo $this->Html->link('おすすめの記事', array('controller'=>'posts', 'action'=>'view')); ?></li>
@@ -58,7 +64,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Articles</a>
+								<?php echo $this->Html->link('Articles', "#", array('class'=>'dropdown-toggle', 'data-hover'=>'dropdown', 'data-toggle'=>'dropdown')); ?>
 								<ul class="dropdown-menu" role="menu">
 									<li><?php echo $this->Html->link('記事を投稿する', array('controller'=>'posts', 'action'=>'add')); ?></li>
 									<li><?php echo $this->Html->link('記事一覧', array('controller'=>'posts', 'action'=>'view')); ?></li>
@@ -72,7 +78,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Login/Logout</a>
+								<?php echo $this->Html->link('Login/Logout', "#", array('class'=>'dropdown-toggle', 'data-hover'=>'dropdown', 'data-toggle'=>'dropdown')); ?>
 								<ul class="dropdown-menu" role="menu">
 									<?php if ($auth) : ?>
 										<li><a href='#'>ログイン済みです！</a></li>
@@ -132,7 +138,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <div class="container">
                 <div class="row">
                     <hr class="thin-hr" />
-
                     <div class="col-md-12 text-center wow fadeIn" data-wow-delay="0.5s">
                         <span class="copyright">Created 2022.  Owner Ren</span>
                     </div>
