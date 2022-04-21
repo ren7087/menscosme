@@ -199,7 +199,7 @@
         キャンメイク(CANMAKE) ステイオンバームルージュ
     </li>
     </h4>
-    <?php echo $this->Html->image("genderless/lip.png", array("width"=>"200px", "height"=>"200px")); ?>
+    <?php echo $this->Html->image("genderless/lip.jpg", array("width"=>"200px", "height"=>"200px")); ?>
 </div>
 <br>
 <br>
