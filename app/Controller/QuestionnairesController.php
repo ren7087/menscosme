@@ -99,26 +99,23 @@ class QuestionnairesController extends AppController {
                 $coolPoint += 5;
             }
 
+            $countDB = $this->Questionnaire->find('count');
+            $count = $countDB + 1;
+            $this->set(compact("count"));
             
             if ($this->Questionnaire->save($this->request->data)) {
                 if ($kpopPoint >= 10) {
-                    // echo "あなたはkpop";
-                    $this->redirect('/questionnaires/kpop');
+                    $this->redirect('/questionnaires/kpop/'. $count);
                 } elseif ($genderlessPoint >= 10) {
-                    // echo "あなたはgenderless";
-                    $this->redirect('/questionnaires/genderless');
+                    $this->redirect('/questionnaires/genderless/'. $count);
                 } elseif ($visualPoint >= 10) {
-                    // echo "あんたはvisual";
-                    $this->redirect('/questionnaires/visual');
+                    $this->redirect('/questionnaires/visual/'. $count);
                 } elseif ($hostPoint >= 10) {
-                    // echo "あなたはhost";
-                    $this->redirect('/questionnaires/host');
+                    $this->redirect('/questionnaires/host/'. $count);
                 } elseif ($coolPoint >= 15) {
-                    // echo "あなたはcool";
-                    $this->redirect('/questionnaires/cool');
+                    $this->redirect('/questionnaires/cool/'. $count);
                 } else {
-                    // echo "あなたはmidasinami";
-                    $this->redirect('/questionnaires/midasinami');
+                    $this->redirect('/questionnaires/midasinami/'. $count);
                 }
             }
             $this->set(compact("kpopPoint", "genderlessPoint", "visualPoint", "hostPoint", "coolPoint"));
@@ -126,27 +123,33 @@ class QuestionnairesController extends AppController {
         } 
     }
 
-    public function kpop() {
-        $this->set(compact("kpopPoint", "genderlessPoint", "visualPoint", "hostPoint", "coolPoint"));
+    public function kpop($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 
-    public function host() {
-        $this->set(compact("kpopPoint", "genderlessPoint", "visualPoint", "hostPoint", "coolPoint"));
+    public function host($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 
-    public function genderless() {
-
+    public function genderless($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 
-    public function cool() {
-
+    public function cool($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 
-    public function midasinami() {
-
+    public function midasinami($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 
-    public function visual() {
-
+    public function visual($id = null) {
+        $this->Questionnaire->id = $id;
+        $this->set('questionnaire', $this->Questionnaire->read());
     }
 }

@@ -110,11 +110,5 @@
     ?><br><br>
     <?php echo $this->Form->end(__('診断する'));?>
 </div>
-c:<?php echo $coolPoint; ?>
-h:<? echo $hostPoint; ?>
-g:<?php echo $genderlessPoint; ?>
-v:<?php echo $visualPoint; ?>
-k:<?php echo $kpopPoint; ?>
-m:<?php echo $midasinamiPoint; ?>
 <br>
 <br>
