@@ -66,12 +66,6 @@
                                         </button>
                                         <span data-easyshare-button-count="twitter">0</span>
 
-                                        <!-- Google+ -->
-                                        <button data-easyshare-button="google">
-                                            <span>+1</span>
-                                        </button>
-                                        <span data-easyshare-button-count="google">0</span>
-
                                         <div data-easyshare-loader>Loading...</div>
                                     </div>
                                 </div>                            

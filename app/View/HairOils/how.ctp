@@ -17,13 +17,6 @@
 <body id="page-top" class="index">
 
     <div class="master-wrapper">
-
-        <div class="preloader">
-            <div class="preloader-img">
-            	<span class="loading-animation animate-flicker"><?php echo $this->Html->image("loading.GIF"); ?></span>
-            </div>
-        </div>
-
         <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="assets/img/bg/bg2.jpg" data-speed="0.7">
             <div class="section-inner">
                 <div class="container">
@@ -69,12 +62,6 @@
                                             <span>Tweet</span>
                                         </button>
                                         <span data-easyshare-button-count="twitter">0</span>
-
-                                        <!-- Google+ -->
-                                        <button data-easyshare-button="google">
-                                            <span>+1</span>
-                                        </button>
-                                        <span data-easyshare-button-count="google">0</span>
 
                                         <div data-easyshare-loader>Loading...</div>
                                     </div>
