@@ -156,7 +156,7 @@
                                     <div class="row">
                                         <div class="col-xs-10 col-xs-offset-1 item-caption text-center">
                                             <div class="mb30">
-                                                <?php echo $this->Html->image('bg2.jpg', array('class'=>'img-responsive img-circle testimonial-author'));?>
+                                                <?php echo $this->Html->link($this->Html->image('bg2.jpg', array('class'=>'img-responsive img-circle testimonial-author')), array('controller'=>'skincares','action'=>'recommend'),array('escape'=>false));?>
                                             </div>
                                             <h4>おすすめのスキンケア</h4>
                                             <p class="lead">男性の肌は女性よりも弱いと言われています。肌の綺麗さは清潔感を保つ上で重要です。</p>
@@ -167,7 +167,7 @@
                                     <div class="row">
                                         <div class="col-xs-10 col-xs-offset-1 item-caption text-center">
                                             <div class="mb30">
-                                            <?php echo $this->Html->image('bg2.jpg', array('class'=>'img-responsive img-circle testimonial-author'));?>
+                                                <?php echo $this->Html->link($this->Html->image('bg2.jpg', array('class'=>'img-responsive img-circle testimonial-author')), array('controller'=>'perfumes','action'=>'trend'),array('escape'=>false));?>
                                             </div>
                                             <h4>流行りの香水</h4>
                                             <p class="lead">香水はおしゃれの入り口としては、ハードルも低く、これだけでも女性からの好感度はグッとアップします！</p>
