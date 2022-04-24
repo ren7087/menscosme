@@ -27,7 +27,7 @@ class ShopsController extends AppController {
 
         $this->paginate = array(
             'conditions' => $conditions,
-            'limit' => 10,
+            'limit' => 9,
         );
         $this->set('products', $this->paginate('Product'));
     }
