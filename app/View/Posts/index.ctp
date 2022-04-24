@@ -76,7 +76,7 @@
         	<div class="dark-opaqued section-inner pad-sides-60 match-height text-right" data-mh="promo-inner">
         		<h3>みんなの記事を読む</h3>
         		<p class="lead">メンズメイクの先人たちが残してくれた知識が詰まっています！ぜひ読んでみてください！</p>
-                <p class="mt30"><?php echo $this->Html->link('記事を読む！', '/posts/page', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
+                <p class="mt30"><?php echo $this->Html->link('記事を読む！', '/posts/page2', array('class'=>'btn btn-primary btn-white page-scroll')); ?></p>
         	</div>
         </div>
 
