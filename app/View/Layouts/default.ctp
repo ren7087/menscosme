@@ -69,6 +69,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 									<li><?php echo $this->Html->link('記事を投稿する', array('controller'=>'posts', 'action'=>'add')); ?></li>
 									<li><?php echo $this->Html->link('記事一覧', array('controller'=>'posts', 'action'=>'view')); ?></li>
 									<li><?php echo $this->Html->link('みんなの記事を見る', array('controller'=>'posts', 'action'=>'page2')); ?></li>
+									<li><?php echo $this->Html->link('投稿済み記事', array('controller'=>'posts', 'action'=>'mypage')); ?></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -109,7 +110,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     		            <div class="col-md-4">
     		            	<div class="widget about-us-widget">
                                 <h4 class="widget-title"><strong>About</strong></h4>
-                                <p>このサイトはrenによって作成されました。最終更新日は2022/04/18 です。</p>
+                                <p>このサイトはrenによって作成されました。最終更新日は2022/04/24 です。</p>
                             </div>
     		        	</div>
     		        	<div class="col-md-4">

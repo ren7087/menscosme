@@ -34,8 +34,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 mt30 text-center wow fadeIn" data-wow-delay="0.5s">
-                            <h2 class="section-heading">みんなの記事</h2>
-                            <h3 class="section-subheading text-muted secondary-font">いい記事がいっぱいです!</h3>
+                            <h2 class="section-heading">あなたが投稿した記事</h2>
                         </div>
                     </div>
                 </div>
@@ -55,9 +54,6 @@
                             <div class="row">
                                 <div class="col-xs-10">
                                     <h2 class="post-title"><?php echo h($post['Post']['title']); ?></h2>
-                                    <div class="item-metas text-muted mb30">
-                                        <span class="meta-item">こちらの記事は<span class="secondary-font" style="color: red;"><?php echo h($post['Post']['username']); ?></span>さんが投稿しました！</span>
-                                    </div>
                                     <div class="hover-item mb30">
                                         <?php echo $this->Html->image($post["Post"]["image"], array("class"=>"img-responsive smoothie wow fadeIn", "data-wow-delay"=>"0.5s")); ?>                                        <div class="hover-item-caption smoothie">
                                             <h3 class="vertical-center smoothie"><?php echo $this->Html->link("View", '/posts/page/'.$post['Post']['id'], array("class"=>"smoothie btn btn-primary btn-white page-scroll", "title"=>"view article")); ?></h3>

@@ -18,6 +18,18 @@ class PostsController extends AppController {
 
     }
 
+    //ログインしているユーザーが投稿した一覧
+    public function mypage() {
+      $userID = $this->Auth->user('id');
+      $posts = $this->Post->find('all', array(
+        "conditions" => array(
+          'Post.valid' => 1,
+          'Post.userID' => $userID,
+        )
+      ));
+      $this->set(compact('posts'));
+    }
+
     //ユーザーの投稿データ個別
     public function page($id = null) {
       $this->Post->id = $id;
@@ -44,7 +56,8 @@ class PostsController extends AppController {
 
     public function add() {
       $username = $this->Auth->user('username');
-      $this->set(compact('username'));
+      $userID = $this->Auth->user('id');
+      $this->set(compact('username', 'userID'));
         if ($this->request->is('post')) {
           $tmp = $this->request->data['Post']['file']['tmp_name'];
           if(is_uploaded_file($tmp)) {
