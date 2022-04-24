@@ -2,7 +2,7 @@
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('Flash');
-    public $uses = array('Post', 'Comment');
+    public $uses = array('Post', 'Comment', 'User');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -24,7 +24,7 @@ class PostsController extends AppController {
       $posts = $this->Post->find('all', array(
         "conditions" => array(
           'Post.valid' => 1,
-          'Post.userID' => $userID,
+          'Post.user_id' => $userID,
         )
       ));
       $this->set(compact('posts'));
@@ -68,7 +68,7 @@ class PostsController extends AppController {
               $this->request->data['Post']['image'] = $file_name;
               if ($this->Post->save($this->request->data)) {
                 $this->Session->setFlash(__('The upload has been saved'));
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'mypage'));
               } else {
                 $this->Session->setFlash(__('The upload could not be saved. Please, try again.'));
               }

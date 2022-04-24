@@ -3,7 +3,7 @@ App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
     public $components = array('Flash');
-    public $uses = array('User');
+    public $uses = array('User', 'Post');
     
     public function beforeFilter() {
         parent::beforeFilter();
