@@ -10,19 +10,25 @@ class ShopsController extends AppController {
 
     public function index(){
         $name = $this->request->data['Search']['name'];
-        $conditions = array(
+        if ($this->request->is('Post') && !empty($name) && !( $this->request->params['named']['page'] = 1)) {
+            $this->request->params['named']['page'] = 1;
+            $conditions = array(
+                    'Product.title LIKE' => '%'.$name.'%'
+            );
+            $this->Session->write('conditions', $conditions);
+        } elseif($this->request->is('Post') && !empty($name)) {
+            $conditions = array(
                 'Product.title LIKE' => '%'.$name.'%'
-        );
-        if ($this->request->is('Post') && !empty($name)) {
-            $this->paginate = array(
-                'conditions' => $conditions,
-                'limit' => 10,
             );
+            $this->Session->write('conditions', $conditions);
         } else {
-            $this->paginate = array(
-                'limit' => 10,
-            );
+            $conditions = null;
         }
+
+        $this->paginate = array(
+            'conditions' => $conditions,
+            'limit' => 10,
+        );
         $this->set('products', $this->paginate('Product'));
     }
 
