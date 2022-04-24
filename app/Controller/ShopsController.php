@@ -17,12 +17,10 @@ class ShopsController extends AppController {
             $this->paginate = array(
                 'conditions' => $conditions,
                 'limit' => 10,
-                // 'fields' => array('Product.*'),
             );
         } else {
             $this->paginate = array(
                 'limit' => 10,
-                // 'fields' => array('Product.*'),
             );
         }
         $this->set('products', $this->paginate('Product'));

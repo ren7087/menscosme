@@ -21,7 +21,6 @@ class PostsController extends AppController {
     //ユーザーの投稿データ個別
     public function page($id = null) {
       $this->Post->id = $id;
-      // $this->set('posts', $this->Post->read());
       $posts = $this->Post->find('all', array(
         "conditions" => array(
           'Post.valid' => 1,
@@ -44,7 +43,6 @@ class PostsController extends AppController {
 	  }
 
     public function add() {
-      // $userid = $this->Auth->user('id');
       $username = $this->Auth->user('username');
       $this->set(compact('username'));
         if ($this->request->is('post')) {
