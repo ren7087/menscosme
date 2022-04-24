@@ -22,13 +22,6 @@
 <body id="page-top" class="index">
 
     <div class="master-wrapper">
-
-        <div class="preloader">
-            <div class="preloader-img">
-            	<span class="loading-animation animate-flicker"><?php echo $this->Html->image("loading.GIF"); ?></span>
-            </div>
-        </div>
-
         <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-speed="0.7">
             <div class="section-inner">
                 <div class="container">
